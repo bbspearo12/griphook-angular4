@@ -1,11 +1,12 @@
 package com.groupware.griphook.repository;
 
-import com.groupware.griphook.domain.PersistentToken;
-import com.groupware.griphook.domain.User;
 import java.time.LocalDate;
+import java.util.List;
+
 import org.springframework.data.jpa.repository.JpaRepository;
 
-import java.util.List;
+import com.groupware.griphook.domain.PersistentToken;
+import com.groupware.griphook.domain.User;
 
 /**
  * Spring Data JPA repository for the PersistentToken entity.

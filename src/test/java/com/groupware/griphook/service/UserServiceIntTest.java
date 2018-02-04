@@ -1,13 +1,12 @@
 package com.groupware.griphook.service;
 
-import com.groupware.griphook.GriphookApp;
-import com.groupware.griphook.config.Constants;
-import com.groupware.griphook.domain.PersistentToken;
-import com.groupware.griphook.domain.User;
-import com.groupware.griphook.repository.PersistentTokenRepository;
-import com.groupware.griphook.repository.UserRepository;
-import com.groupware.griphook.service.dto.UserDTO;
-import com.groupware.griphook.service.util.RandomUtil;
+import static org.assertj.core.api.Assertions.assertThat;
+
+import java.time.Instant;
+import java.time.LocalDate;
+import java.time.temporal.ChronoUnit;
+import java.util.List;
+import java.util.Optional;
 
 import org.apache.commons.lang3.RandomStringUtils;
 import org.junit.Before;
@@ -20,13 +19,14 @@ import org.springframework.data.domain.PageRequest;
 import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.transaction.annotation.Transactional;
 
-import java.time.Instant;
-import java.time.temporal.ChronoUnit;
-import java.time.LocalDate;
-import java.util.List;
-import java.util.Optional;
-
-import static org.assertj.core.api.Assertions.assertThat;
+import com.groupware.griphook.GriphookApp;
+import com.groupware.griphook.config.Constants;
+import com.groupware.griphook.domain.PersistentToken;
+import com.groupware.griphook.domain.User;
+import com.groupware.griphook.repository.PersistentTokenRepository;
+import com.groupware.griphook.repository.UserRepository;
+import com.groupware.griphook.service.dto.UserDTO;
+import com.groupware.griphook.service.util.RandomUtil;
 
 /**
  * Test class for the UserResource REST controller.

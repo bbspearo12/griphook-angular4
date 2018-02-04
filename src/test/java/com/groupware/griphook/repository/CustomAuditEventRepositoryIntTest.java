@@ -1,9 +1,16 @@
 package com.groupware.griphook.repository;
 
-import com.groupware.griphook.GriphookApp;
-import com.groupware.griphook.config.Constants;
-import com.groupware.griphook.config.audit.AuditEventConverter;
-import com.groupware.griphook.domain.PersistentAuditEvent;
+import static com.groupware.griphook.repository.CustomAuditEventRepository.EVENT_DATA_COLUMN_MAX_LENGTH;
+import static org.assertj.core.api.Assertions.assertThat;
+
+import java.time.Instant;
+import java.util.Date;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
+import javax.servlet.http.HttpSession;
+
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -16,15 +23,10 @@ import org.springframework.security.web.authentication.WebAuthenticationDetails;
 import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.transaction.annotation.Transactional;
 
-import javax.servlet.http.HttpSession;
-import java.time.Instant;
-import java.util.Date;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-
-import static org.assertj.core.api.Assertions.assertThat;
-import static com.groupware.griphook.repository.CustomAuditEventRepository.EVENT_DATA_COLUMN_MAX_LENGTH;
+import com.groupware.griphook.GriphookApp;
+import com.groupware.griphook.config.Constants;
+import com.groupware.griphook.config.audit.AuditEventConverter;
+import com.groupware.griphook.domain.PersistentAuditEvent;
 
 /**
  * Test class for the CustomAuditEventRepository class.

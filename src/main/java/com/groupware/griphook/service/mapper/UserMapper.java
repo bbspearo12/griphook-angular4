@@ -1,13 +1,15 @@
 package com.groupware.griphook.service.mapper;
 
-import com.groupware.griphook.domain.Authority;
-import com.groupware.griphook.domain.User;
-import com.groupware.griphook.service.dto.UserDTO;
+import java.util.List;
+import java.util.Objects;
+import java.util.Set;
+import java.util.stream.Collectors;
 
 import org.springframework.stereotype.Service;
 
-import java.util.*;
-import java.util.stream.Collectors;
+import com.groupware.griphook.domain.Authority;
+import com.groupware.griphook.domain.User;
+import com.groupware.griphook.service.dto.UserDTO;
 
 /**
  * Mapper for the entity User and its DTO called UserDTO.

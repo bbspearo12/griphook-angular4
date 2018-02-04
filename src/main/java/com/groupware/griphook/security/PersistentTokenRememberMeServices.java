@@ -1,14 +1,13 @@
 package com.groupware.griphook.security;
 
-import com.groupware.griphook.domain.PersistentToken;
-import com.groupware.griphook.repository.PersistentTokenRepository;
-import com.groupware.griphook.repository.UserRepository;
-import com.groupware.griphook.service.util.RandomUtil;
+import java.io.Serializable;
+import java.time.LocalDate;
+import java.util.Arrays;
+import java.util.Date;
+import java.util.concurrent.TimeUnit;
 
-import com.google.common.cache.Cache;
-import com.google.common.cache.CacheBuilder;
-
-import io.github.jhipster.config.JHipsterProperties;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -16,17 +15,21 @@ import org.springframework.dao.DataAccessException;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
-import org.springframework.security.web.authentication.rememberme.*;
+import org.springframework.security.web.authentication.rememberme.AbstractRememberMeServices;
+import org.springframework.security.web.authentication.rememberme.CookieTheftException;
+import org.springframework.security.web.authentication.rememberme.InvalidCookieException;
+import org.springframework.security.web.authentication.rememberme.RememberMeAuthenticationException;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
-import java.io.Serializable;
-import java.time.LocalDate;
-import java.util.concurrent.TimeUnit;
-import java.util.Arrays;
-import java.util.Date;
+import com.google.common.cache.Cache;
+import com.google.common.cache.CacheBuilder;
+import com.groupware.griphook.domain.PersistentToken;
+import com.groupware.griphook.repository.PersistentTokenRepository;
+import com.groupware.griphook.repository.UserRepository;
+import com.groupware.griphook.service.util.RandomUtil;
+
+import io.github.jhipster.config.JHipsterProperties;
 
 /**
  * Custom implementation of Spring Security's RememberMeServices.

@@ -1,8 +1,8 @@
 package com.groupware.griphook.security;
 
-import com.groupware.griphook.GriphookApp;
-import com.groupware.griphook.domain.User;
-import com.groupware.griphook.repository.UserRepository;
+import static org.assertj.core.api.Assertions.assertThat;
+
+import java.util.Locale;
 
 import org.apache.commons.lang3.RandomStringUtils;
 import org.junit.Before;
@@ -15,9 +15,9 @@ import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.transaction.annotation.Transactional;
 
-import java.util.Locale;
-
-import static org.assertj.core.api.Assertions.assertThat;
+import com.groupware.griphook.GriphookApp;
+import com.groupware.griphook.domain.User;
+import com.groupware.griphook.repository.UserRepository;
 
 /**
  * Test class for DomainUserDetailsService.

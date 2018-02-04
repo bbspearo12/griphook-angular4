@@ -1,9 +1,9 @@
 package com.groupware.griphook.security;
 
-import com.groupware.griphook.config.Constants;
-
 import org.springframework.data.domain.AuditorAware;
 import org.springframework.stereotype.Component;
+
+import com.groupware.griphook.config.Constants;
 
 /**
  * Implementation of AuditorAware based on Spring Security.
