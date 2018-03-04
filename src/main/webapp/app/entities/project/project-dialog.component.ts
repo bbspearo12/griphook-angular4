@@ -28,6 +28,10 @@ export class ProjectDialogComponent implements OnInit {
 
     ngOnInit() {
         this.isSaving = false;
+        this.project.defaultProjectMargin = 40;
+        this.project.subcontractProjectMargin = 20;
+        this.project.pmpercentage = 20;
+        this.project.risk = 3;
     }
 
     clear() {

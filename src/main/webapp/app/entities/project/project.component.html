@@ -16,21 +16,21 @@
         <table class="table table-striped">
             <thead>
             <tr jhiSort [(predicate)]="predicate" [(ascending)]="reverse" [callback]="transition.bind(this)">
-            <th jhiSortBy="id"><span>ID</span> <span class="fa fa-sort"></span></th>
+            <!--<th jhiSortBy="id"><span>ID</span> <span class="fa fa-sort"></span></th>-->
             <th jhiSortBy="name"><span>Name</span> <span class="fa fa-sort"></span></th>
             <th jhiSortBy="accoutManager"><span>Accout Manager</span> <span class="fa fa-sort"></span></th>
             <th jhiSortBy="presalesArchitect"><span>Presales Architect</span> <span class="fa fa-sort"></span></th>
             <th jhiSortBy="defaultProjectMargin"><span>Default Project Margin</span> <span class="fa fa-sort"></span></th>
             <th jhiSortBy="subcontractProjectMargin"><span>Subcontract Project Margin</span> <span class="fa fa-sort"></span></th>
-            <th jhiSortBy="pmpercentage"><span>Pmpercentage</span> <span class="fa fa-sort"></span></th>
+            <th jhiSortBy="pmpercentage"><span>PM Percentage</span> <span class="fa fa-sort"></span></th>
             <th jhiSortBy="risk"><span>Risk</span> <span class="fa fa-sort"></span></th>
             <th></th>
             </tr>
             </thead>
             <tbody>
             <tr *ngFor="let project of projects ;trackBy: trackId">
-                <td><a [routerLink]="['../project', project.id ]">{{project.id}}</a></td>
-                <td>{{project.name}}</td>
+                <!--<td>{{project.id}}</td>-->
+                <td><a [routerLink]="['../project', project.id ]">{{project.name}}</a></td>
                 <td>{{project.accoutManager}}</td>
                 <td>{{project.presalesArchitect}}</td>
                 <td>{{project.defaultProjectMargin}}</td>

@@ -16,7 +16,7 @@
         <table class="table table-striped">
             <thead>
             <tr>
-            <th><span>ID</span></th>
+            <!--<th><span>ID</span></th>-->
             <th><span>Name</span></th>
             <th><span>Estimated Hours</span></th>
             <th><span>Resource</span></th>
@@ -29,8 +29,8 @@
             </thead>
             <tbody>
             <tr *ngFor="let task of tasks ;trackBy: trackId">
-                <td><a [routerLink]="['../task', task.id ]">{{task.id}}</a></td>
-                <td>{{task.name}}</td>
+                <!--<td>{{task.id}}</td>-->
+                <td><a [routerLink]="['../task', task.id ]">{{task.name}}</a></td>
                 <td>{{task.estimatedHours}}</td>
                 <td>{{task.resource}}</td>
                 <td>{{task.cost}}</td>

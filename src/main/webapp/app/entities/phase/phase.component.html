@@ -16,7 +16,7 @@
         <table class="table table-striped">
             <thead>
             <tr>
-            <th><span>ID</span></th>
+            <!--<th><span>ID</span></th>-->
             <th><span>Name</span></th>
             <th><span>Sub Total</span></th>
             <th><span>Sub Total With Margin</span></th>
@@ -26,13 +26,13 @@
             </thead>
             <tbody>
             <tr *ngFor="let phase of phases ;trackBy: trackId">
-                <td><a [routerLink]="['../phase', phase.id ]">{{phase.id}}</a></td>
-                <td>{{phase.name}}</td>
+                <!--<td>{{phase.id}}</td>-->
+                <td><a [routerLink]="['../phase', phase.id ]">{{phase.name}}</a></td>
                 <td>{{phase.subTotal}}</td>
                 <td>{{phase.subTotalWithMargin}}</td>
                 <td>
                     <div *ngIf="phase.project">
-                        <a [routerLink]="['../project', phase.project?.id ]" >{{phase.project?.id}}</a>
+                        <a [routerLink]="['../project', phase.project?.id ]" >{{phase.project?.name}}</a>
                     </div>
                 </td>
                 <td class="text-right">

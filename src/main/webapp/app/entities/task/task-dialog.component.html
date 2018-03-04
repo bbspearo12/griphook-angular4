@@ -61,17 +61,17 @@
             <input type="number" class="form-control" name="numberOfResources" id="field_numberOfResources"
                 [(ngModel)]="task.numberOfResources" />
         </div>
-        <div class="form-group">
-            <label class="form-control-label" for="field_subTotal">Sub Total</label>
-            <input type="number" class="form-control" name="subTotal" id="field_subTotal"
-                [(ngModel)]="task.subTotal" />
-        </div>
+        <!--<div class="form-group">-->
+            <!--<label class="form-control-label" for="field_subTotal">Sub Total</label>-->
+            <!--<input type="number" class="form-control" name="subTotal" id="field_subTotal"-->
+                <!--[(ngModel)]="task.subTotal" />-->
+        <!--</div>-->
 
         <div class="form-group">
             <label class="form-control-label" for="field_phase">Phase</label>
             <select class="form-control" id="field_phase" name="phase" [(ngModel)]="task.phase" >
                 <option [ngValue]="null"></option>
-                <option [ngValue]="phaseOption.id === task.phase?.id ? task.phase : phaseOption" *ngFor="let phaseOption of phases; trackBy: trackPhaseById">{{phaseOption.id}}</option>
+                <option [ngValue]="phaseOption.id === task.phase?.id ? task.phase : phaseOption" *ngFor="let phaseOption of phases; trackBy: trackPhaseById">{{phaseOption.name}}</option>
             </select>
         </div>
     </div>
